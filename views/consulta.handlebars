@@ -1,0 +1,88 @@
+<div class="container text-center">
+    <div class="row">
+        <div class="col-1">
+            &nbsp;
+        </div>
+        <div class="col bg-primary">
+            <nav class="navbar bg-primary navbar-expand-lg" data-bs-theme="dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">SISTEMA WEB</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav">
+                            <a class="nav-link" aria-current="page" href="/">Cadastrar</a>
+                            <a class="nav-link active" href="/consulta">Consultar</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="col-1">
+            &nbsp;
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-1">
+            &nbsp;
+        </div>
+        <div class="col bg-white">
+            &nbsp;
+        </div>
+        <div class="col-1">
+            &nbsp;
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-1">
+            &nbsp;
+        </div>
+        <div class="col bg-white">
+            <p class="text-start fs-5">Consultar - Agendamento de Potenciais Clientes</p>
+            <p class="text-start fs-6">Sistema Utilizado para agendamento de serviços.</p>
+            <p>
+            <div class="row">
+                    <div class="card mb-3 col-12">
+                        <div class="card-body">
+                            <table class="table table-responsive table-hover col-12">
+                                <thead class="table-active bg-primary">
+                                    <tr style="color: white;">
+                                        <th scope="col">Nome</th>
+                                        <th scope="col">Telefone</th>
+                                        <th scope="col">Origem</th>
+                                        <th scope="col">Contato</th>
+                                        <th scope="col">Observação</th>
+                                        <th scope="col">Ação</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {{#each agendamentos}}
+                                        <tr style="color:wrgb(14, 14, 14);font: size 12px;">
+                                            <td>{{nome}}</td>
+                                            <td>{{telefone}}</td>
+                                            <td>{{origem}}</td>
+                                            <td>{{data_contato}}</td>
+                                            <td>{{observacao}}</td>
+                                            <td>
+                                                <button type="button" class="btn btn-outline-primary"
+                                                    style="width: 75px;"><a href="/editar/{{id}}">Editar</a></button>
+                                                <button type="button" class="btn btn-outline-primary" 
+                                                    style="width: 75px;"><a href="/excluir/{{id}}">Excluir</a></button>
+                                            </td>
+                                        </tr>
+                                    {{/each}}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </p>
+        </div>
+        <div class="col-1">
+            &nbsp;
+        </div>
+    </div>
+</div>
